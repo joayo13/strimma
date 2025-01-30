@@ -1,3 +1,26 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+@layer base {
+    :root {
+        --color-primary: #171717;
+        --color-secondary: #404040;
+        --color-text-base: #FFFFFF;
+        --color-bg-primary: #FFFFFF;
+    }
+
+    * {
+        @apply transition-colors duration-500 ease-in-out;
+    }
+}
+
+.theme-black {
+    --color-primary: #171717;
+        --color-secondary: #404040;
+}
+
+.theme-orange {
+    --color-primary: orange;
+    --color-secondary: yellow;
+}
