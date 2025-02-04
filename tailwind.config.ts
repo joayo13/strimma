@@ -7,7 +7,7 @@ export default {
 		extend: {
 			colors: {
 				primary: "var(--color-primary)",
-				secondary: "var(--color-primary)",
+				secondary: "var(--color-secondary)",
 				bgPrimary: "var(--color-bg-primary)",
 				tBase: "var(--color-text-base)"
 			}
