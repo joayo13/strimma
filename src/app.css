@@ -21,6 +21,7 @@
 }
 
 .theme-orange {
-    --color-primary: orange;
-    --color-secondary: yellow;
+    --color-primary: #f97316;
+    --color-secondary: #fdba74;
+    --color-text-base: #431407;
 }

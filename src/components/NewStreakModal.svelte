@@ -1,4 +1,4 @@
-<script lang="ts">
+   <script lang="ts">
   
     let settingsDialog: HTMLDialogElement;
   
@@ -11,13 +11,12 @@
     }
   </script>
   
-  <button aria-label="settings" onclick={open} class="w-12 h-12 md:w-20 md:h-20  rounded-full bg-neutral-500">
-  </button >
+  <button onclick={open} class="hover:bg-secondary transition-colors px-4 py-2 rounded-lg">+ Add New Streak</button>
   
   <dialog bind:this={settingsDialog} class="backdrop:bg-black/50 rounded-lg overflow-hidden text-tBase">
     <div class={`bg-primary p-6`}>
-      <h2 class="text-xl font-bold mb-4">Settings</h2>
-      <p>Some settings options...</p>
+      <h2 class="text-xl font-bold mb-4">Add New Streak</h2>
+      <p>options...</p>
       <button onclick={close} class="mt-4 px-4 py-2 bg-secondary rounded-md">
         Close
       </button>
