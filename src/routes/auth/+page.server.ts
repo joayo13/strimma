@@ -13,7 +13,13 @@ export const actions: Actions = {
       console.error(error)
       redirect(303, '/auth/error')
     } else {
-      redirect(303, '/')
+      const { error } = await supabase.auth.signInWithPassword({ email, password })
+      if (error) {
+        console.error(error)
+        redirect(303, '/auth/error')
+      } else {
+        redirect(303, '/')
+      }
     }
   },
   login: async ({ request, locals: { supabase } }) => {
@@ -26,7 +32,7 @@ export const actions: Actions = {
       console.error(error)
       redirect(303, '/auth/error')
     } else {
-      redirect(303, '/private')
+      redirect(303, '/')
     }
   },
 }
