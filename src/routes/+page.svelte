@@ -4,7 +4,7 @@
 	import type { EventHandler } from 'svelte/elements';
 	import NewStreakModal from '../components/NewStreakModal.svelte';
 	let { data } = $props()
-	let { notes, supabase, user } = $derived(data)
+	let { streaks, supabase, user } = $derived(data)
 	const logout = async () => {
       const { error } = await supabase.auth.signOut()
       if (error) {
@@ -19,13 +19,13 @@
   
       const form = evt.target as HTMLFormElement
   
-      const note = (new FormData(form).get('note') ?? '') as string
-      if (!note) return
+      const streak = (new FormData(form).get('streak_name') ?? '') as string
+      if (!streak) return
   
-      const { error } = await supabase.from('notes').insert({ note })
+      const { error } = await supabase.from('streaks').insert({ streak_name: streak, streak_days: 0})
       if (error) console.error(error)
   
-      invalidate('supabase:db:notes')
+      invalidate('supabase:db:streaks')
       form.reset()
     }
   </script>
@@ -33,14 +33,15 @@
   <h1>Private page for user: {user?.email}</h1>
   <h2>Notes</h2>
   <ul>
-    {#each notes as note}
-      <li>{note.note}</li>
+    {#each streaks as streak}
+      <li>{streak.streak_name + streak.streak_days}</li>
+
     {/each}
   </ul>
   <form onsubmit={handleSubmit}>
     <label>
-      Add a note
-      <input name="note" type="text" />
+      Add a streak
+      <input name="streak_name" type="text" />
     </label>
   </form>
   <button onclick={logout}>Logout</button>
