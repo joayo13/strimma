@@ -1,5 +1,6 @@
 
 <script lang="ts">
+	import { invalidateAll } from '$app/navigation';
 	import { incrementStreak } from '$lib/incrementStreak';
 	import NewStreakModal from '../components/NewStreakModal.svelte';
 	let { data } = $props()
@@ -21,7 +22,7 @@
     console.error('Error updating streak:', error);
     return false;
   }
-
+  invalidateAll()
   return true;
 }
 	
