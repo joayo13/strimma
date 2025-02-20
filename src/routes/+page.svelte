@@ -1,9 +1,10 @@
 
 <script lang="ts">
-	import { incrementStreak } from '$lib/incrementStreak';
+	import IncrementStreakButton from '../components/buttons/IncrementStreakButton.svelte';
 	import DeleteStreakDialog from '../components/dialogs/DeleteStreakDialog.svelte';
 	import EditStreakDialog from '../components/dialogs/EditStreakDialog.svelte';
 	import NewStreakDialog from '../components/dialogs/NewStreakDialog.svelte';
+  import { Confetti } from "svelte-confetti"
 	let { data } = $props()
 	let { streaks, supabase, user } = $derived(data)
 	
@@ -14,7 +15,7 @@
         <p class="max-w-[20rem]">{streak.streak_name}</p>
         <div class="flex items-center">
         <p class="px-4 py-2">{streak.streak_days}</p>
-        <button onclick={() => incrementStreak(supabase, streak)} class="hover:bg-secondary transition-colors px-4 py-2 rounded-lg">✅</button>
+        <IncrementStreakButton supabase={supabase} streak={streak}/>
         <EditStreakDialog supabase={supabase} streak={streak} />
         <DeleteStreakDialog supabase={supabase} streak={streak}/>
       </div>

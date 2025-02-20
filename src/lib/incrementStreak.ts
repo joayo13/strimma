@@ -8,7 +8,7 @@ type Streak = {
   last_updated: string;
 };
 
-export async function incrementStreak(supabase: SupabaseClient, streak: Streak): Promise<Streak | null> {
+export async function incrementStreak(supabase: SupabaseClient, streak: Streak, setConfetti: (value: boolean) => void): Promise<Streak | null> {
   const now = new Date();
   const lastUpdated = new Date(streak.last_updated);
 
@@ -36,7 +36,7 @@ export async function incrementStreak(supabase: SupabaseClient, streak: Streak):
       console.error('Error updating streak:', error);
       return null;
     }
-
+    setConfetti(true);
     invalidateAll();
     return updatedStreak;
   }
