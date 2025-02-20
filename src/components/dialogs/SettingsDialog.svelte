@@ -1,4 +1,6 @@
 <script lang="ts">
+	import SelectTheme from "../SelectTheme.svelte";
+
   
     let settingsDialog: HTMLDialogElement;
     let { supabase } = $props()
@@ -23,9 +25,10 @@
   </button >
   
   <dialog bind:this={settingsDialog} class="backdrop:bg-black/50 rounded-lg overflow-hidden text-tBase">
+    
     <div class={`bg-primary p-6`}>
       <h2 class="text-xl font-bold mb-4">Settings</h2>
-      <p>Some settings options...</p>
+      <SelectTheme/>
       <button onclick={logout} class="mt-4 px-4 py-2 bg-secondary rounded-md">Logout</button>
       <button onclick={close} class="mt-4 px-4 py-2 bg-secondary rounded-md">
         Close

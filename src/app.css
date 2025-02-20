@@ -10,10 +10,6 @@
         --color-text-base: #FFFFFF;
         --color-bg-primary: #FFFFFF;
     }
-
-    * {
-        @apply transition-colors duration-500 ease-in-out;
-    }
 }
 
 .theme-black {
@@ -22,8 +18,33 @@
     --color-bg-primary: #FFFFFF;
 }
 
-.theme-orange {
-    --color-primary: #f97316;
-    --color-secondary: #fdba74;
-    --color-text-base: #431407;
+.theme-light {
+    --color-primary: #FFFFFF;
+    --color-secondary: #d4d4d4;
+    --color-text-base: #171717;
+    --color-bg-primary: #171717;
+}
+.theme-amethyst {
+    --color-primary: #2E1065;
+    --color-secondary: #5B21B6;
+    --color-text-base: #DDD6FE;
+    --color-bg-primary: #DDD6FE;
+}
+.theme-ruby {
+    --color-primary: #450A0A;
+    --color-secondary: #9A3412;
+    --color-text-base: #FECACA;
+    --color-bg-primary: #FECACA;
+}
+.theme-janvier {
+    --color-primary: #93C5FD;
+    --color-secondary: #DBEAFE;
+    --color-text-base: #020617;
+    --color-bg-primary: #020617;
+}
+.theme-zen {
+    --color-primary: #BBF7D0;
+    --color-secondary: #A3E635;
+    --color-text-base: #171717;
+    --color-bg-primary: #171717;
 }
