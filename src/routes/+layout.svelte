@@ -21,7 +21,7 @@
 	<a href="/" class="text-3xl font-bold md:text-6xl">streakr</a>
 	<SettingsDialog supabase={supabase}/>
 </nav>
-<div class={`bg-primary text-tBase theme-${theme} min-h-screen flex items-center justify-center`}>
-{@render children()}
+<div class={`bg-primary text-tBase theme-${theme} min-h-screen flex items-center justify-center px-2`}>
+{@render children()}	
 </div>
 

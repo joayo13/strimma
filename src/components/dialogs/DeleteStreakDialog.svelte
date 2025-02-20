@@ -14,7 +14,7 @@
 
   </script>
   
-  <button aria-label="Delete streak" onclick={open}>
+  <button aria-label="Delete streak" onclick={open} class="hover:bg-secondary transition-colors px-4 py-2 rounded-lg">
     🗑️
   </button>
   
