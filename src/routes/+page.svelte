@@ -1,8 +1,8 @@
 
 <script lang="ts">
-	import { deleteStreak } from '$lib/deleteStreak';
 	import { incrementStreak } from '$lib/incrementStreak';
-	import NewStreakModal from '../components/NewStreakModal.svelte';
+	import DeleteStreakDialog from '../components/dialogs/DeleteStreakDialog.svelte';
+	import NewStreakDialog from '../components/dialogs/NewStreakDialog.svelte';
 	let { data } = $props()
 	let { streaks, supabase, user } = $derived(data)
 	
@@ -11,10 +11,10 @@
     {#each streaks as streak}
       <li>{streak.streak_name + streak.streak_days} 
         <button onclick={() => incrementStreak(supabase, streak)} class="bg-green-500">streak</button>
-        <button onclick={() => deleteStreak(supabase, streak)}>delete</button>
+        <DeleteStreakDialog supabase={supabase} streak={streak}/>
       </li>
 
     {/each}
-    <NewStreakModal supabase={supabase} streaks={streaks}/>
+    <NewStreakDialog supabase={supabase} streaks={streaks}/>
   </ul>
   

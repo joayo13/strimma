@@ -1,6 +1,8 @@
    <script lang="ts">
 	import { invalidate } from "$app/navigation";
 	import type { EventHandler } from "svelte/elements";
+	import LightButton from "../buttons/LightButton.svelte";
+	import DarkButton from "../buttons/DarkButton.svelte";
   let {supabase, streaks} = $props()
   
     let settingsDialog: HTMLDialogElement;
@@ -38,14 +40,10 @@
         <label class="block py-2" for="streak_name"> 
           Streak Title
         </label>
-          <input name="streak_name" type="text" placeholder="Create a streak" class="bg-secondary indent-2 text-xl px-2 py-2 rounded-lg"/>
+          <input required name="streak_name" type="text" placeholder="Create a streak" class="bg-secondary text-tBase indent-2 text-xl px-2 py-2 rounded-lg"/>
           <div class="flex justify-between mt-4">
-            <button type="submit" class="mt-4 px-4 py-2 hover:bg-secondary bg-bgPrimary text-primary hover:text-tBase rounded-md w-fit">
-              Add Streak
-            </button>
-            <button onclick={close} class="mt-4 px-4 py-2 bg-secondary hover:bg-bgPrimary text-tBase hover:text-primary rounded-md">
-              Cancel
-            </button>
+            <LightButton title="Add Streak" type="submit"/>
+            <DarkButton title="Cancel" onclick={close}/>
           </div>
       </form>
       
