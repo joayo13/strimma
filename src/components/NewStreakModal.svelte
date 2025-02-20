@@ -33,15 +33,21 @@
   
   <dialog bind:this={settingsDialog} class="backdrop:bg-black/50 rounded-lg overflow-hidden text-tBase">
     <div class={`bg-primary p-6`}>
-      <h2 class="text-xl font-bold mb-4">Add New Streak</h2>
+      <h2 class="text-xl mb-4">Add New Streak</h2>
       <form onsubmit={handleSubmit}>
-        <label>
-          Add a streak
-          <input name="streak_name" type="text" />
+        <label class="block py-2" for="streak_name"> 
+          Streak Title
         </label>
+          <input name="streak_name" type="text" placeholder="Create a streak" class="bg-secondary indent-2 text-xl px-2 py-2 rounded-lg"/>
+          <div class="flex justify-between mt-4">
+            <button type="submit" class="mt-4 px-4 py-2 hover:bg-secondary bg-bgPrimary text-primary hover:text-tBase rounded-md w-fit">
+              Add Streak
+            </button>
+            <button onclick={close} class="mt-4 px-4 py-2 bg-secondary hover:bg-bgPrimary text-tBase hover:text-primary rounded-md">
+              Cancel
+            </button>
+          </div>
       </form>
-      <button onclick={close} class="mt-4 px-4 py-2 bg-secondary rounded-md">
-        Close
-      </button>
+      
     </div>
   </dialog>

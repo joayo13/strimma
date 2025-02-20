@@ -2,6 +2,7 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+
 @layer base {
     :root {
         --color-primary: #171717;
@@ -18,6 +19,7 @@
 .theme-black {
     --color-primary: #171717;
     --color-secondary: #404040;
+    --color-bg-primary: #FFFFFF;
 }
 
 .theme-orange {
