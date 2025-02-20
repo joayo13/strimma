@@ -25,11 +25,12 @@
     --color-bg-primary: #171717;
 }
 .theme-amethyst {
-    --color-primary: #2E1065;
+    --color-primary: #1E1B4B;
     --color-secondary: #5B21B6;
     --color-text-base: #DDD6FE;
-    --color-bg-primary: #DDD6FE;
+    --color-bg-primary: #D8B4FE;
 }
+
 .theme-ruby {
     --color-primary: #450A0A;
     --color-secondary: #9A3412;
@@ -42,9 +43,21 @@
     --color-text-base: #020617;
     --color-bg-primary: #020617;
 }
+.theme-voltage {
+    --color-primary: #22D3EE;
+    --color-secondary: #FACC15;
+    --color-text-base: #171717;
+    --color-bg-primary: #171717;
+}
 .theme-zen {
     --color-primary: #BBF7D0;
     --color-secondary: #A3E635;
     --color-text-base: #171717;
     --color-bg-primary: #171717;
+}
+.theme-gamma {
+    --color-primary: #2E1065;
+    --color-secondary: #5B21B6;
+    --color-text-base: #A3E635;
+    --color-bg-primary: #DDD6FE;
 }
