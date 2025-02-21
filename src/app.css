@@ -57,7 +57,7 @@
     --color-bg-primary: #22D3EE;
 }
 .theme-zen {
-    --color-primary: #D9F99D;
+    --color-primary: #ECFDF5;
     --color-secondary: #15803D;
     --color-text-primary: #171717;
     --color-text-secondary: #FFFFFF;
@@ -69,4 +69,11 @@
     --color-text-primary: #A3E635;
     --color-text-secondary: #171717;
     --color-bg-primary: #2E1065;
+}
+.theme-eva {
+    --color-primary: #064E3B;
+    --color-secondary: #0A0A0A;
+    --color-text-primary: #FFFFFF;
+    --color-text-secondary: #FFFFFF;
+    --color-bg-primary: #022C22;
 }

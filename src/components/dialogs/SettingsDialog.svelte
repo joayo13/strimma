@@ -1,5 +1,6 @@
 <script lang="ts">
 	import PrimaryButton from "../buttons/PrimaryButton.svelte";
+	import SecondaryButton from "../buttons/SecondaryButton.svelte";
 import SelectTheme from "../SelectTheme.svelte";
 
   
@@ -31,7 +32,7 @@ import SelectTheme from "../SelectTheme.svelte";
     <div class={`bg-bgPrimary p-6`}>
       <h2 class="text-xl font-bold mb-4">Settings</h2>
       <SelectTheme/>
-      <PrimaryButton title="Logout" onclick={logout} />
+      <SecondaryButton title="Logout" onclick={logout} />
       <PrimaryButton title="Close"  onclick={close} />
     </div>
   </dialog>

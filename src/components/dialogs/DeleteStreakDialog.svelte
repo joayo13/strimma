@@ -25,7 +25,7 @@
       <h2 id="confirm-title" class="text-xl font-bold mb-4">Confirm Deletion</h2>
       <p id="confirm-desc">Are you sure you want to delete this streak?</p>
       <div class="mt-4 flex justify-between">
-        <SecondaryButton title="Delete Streak" onclick={() => deleteStreak(supabase, streak)}/>
+        <SecondaryButton title="Delete Streak" onclick={() => {deleteStreak(supabase, streak); close()}}/>
         <PrimaryButton title="Cancel" onclick={close}/>
       </div>
     </div>

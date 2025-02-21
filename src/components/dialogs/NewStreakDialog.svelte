@@ -28,6 +28,7 @@
   
       invalidate('supabase:db:streaks')
       form.reset()
+      close()
     }
   </script>
   
