@@ -9,7 +9,8 @@ export default {
 				primary: "var(--color-primary)",
 				secondary: "var(--color-secondary)",
 				bgPrimary: "var(--color-bg-primary)",
-				tBase: "var(--color-text-base)"
+				tPrimary: "var(--color-text-primary)",
+				tSecondary: "var(--color-text-secondary)"
 			}
 		}
 	}

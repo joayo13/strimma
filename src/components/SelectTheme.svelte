@@ -9,7 +9,7 @@
     }
   </script>
   
-  <select onchange={changeTheme} bind:value={$theme} class="p-2 border rounded text-tBase bg-secondary">
+  <select onchange={changeTheme} bind:value={$theme} class="p-2 border rounded text-tPrimary bg-primary">
     {#each themes as t}
       <option  value={t}>{t.charAt(0).toUpperCase() + t.slice(1)}</option>
     {/each}

@@ -10,4 +10,4 @@
 <Confetti/>
 {/if}
 </div>
-<button onclick={() => {incrementStreak(supabase, streak, (value: boolean) => confetti = value)}} class="hover:bg-secondary transition-colors px-4 py-2 rounded-lg">✅</button>
+<button onclick={() => {incrementStreak(supabase, streak, (value: boolean) => confetti = value)}} class="hover:bg-primary transition-colors px-4 py-2 rounded-lg">✅</button>

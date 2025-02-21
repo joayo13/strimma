@@ -4,7 +4,6 @@
 	import DeleteStreakDialog from '../components/dialogs/DeleteStreakDialog.svelte';
 	import EditStreakDialog from '../components/dialogs/EditStreakDialog.svelte';
 	import NewStreakDialog from '../components/dialogs/NewStreakDialog.svelte';
-  import { Confetti } from "svelte-confetti"
 	let { data } = $props()
 	let { streaks, supabase, user } = $derived(data)
 	
