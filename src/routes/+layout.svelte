@@ -3,6 +3,7 @@
 	import { invalidate } from '$app/navigation'
   	import { onMount } from 'svelte'
 	import SettingsDialog from '../components/dialogs/SettingsDialog.svelte';
+	import GlobalNotifications from '$lib/components/GlobalNotifications.svelte';
   	let { data, children } = $props()
   	let { session, supabase } = $derived(data)
 
@@ -21,6 +22,7 @@
 	<SettingsDialog supabase={supabase}/>
 </nav>
 <div class={`bg-bgPrimary text-tPrimary min-h-screen flex items-center justify-center px-2`}>
+  <GlobalNotifications />
 {@render children()}	
 </div>
 

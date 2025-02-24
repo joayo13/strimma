@@ -3,6 +3,7 @@
 	import type { EventHandler } from "svelte/elements";
 	import PrimaryButton from "../buttons/PrimaryButton.svelte";
 	import SecondaryButton from "../buttons/SecondaryButton.svelte";
+	import { addNotification } from "$lib/stores/notifications";
   let {supabase, streaks} = $props()
   
     let settingsDialog: HTMLDialogElement;
@@ -25,7 +26,8 @@
   
       const { error } = await supabase.from('streaks').insert({ streak_name: streak, streak_days: 0})
       if (error) console.error(error)
-  
+      
+      addNotification(`${streak} was added to streaks`)
       invalidate('supabase:db:streaks')
       form.reset()
       close()

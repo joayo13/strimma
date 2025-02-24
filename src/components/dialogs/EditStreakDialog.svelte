@@ -3,6 +3,7 @@
 	import type { EventHandler } from "svelte/elements";
 	import SecondaryButton from "../buttons/SecondaryButton.svelte";
 	import PrimaryButton from "../buttons/PrimaryButton.svelte";
+	import { addNotification } from "$lib/stores/notifications";
 	let { supabase, streak } = $props();
 
 	let settingsDialog: HTMLDialogElement;
@@ -37,6 +38,7 @@
 		} 
 
 		invalidate("supabase:db:streaks");
+		addNotification(`${streak.streak_name} updated to ${streak_name}`)
 		form.reset();
 		close();
 	};

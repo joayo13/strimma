@@ -1,5 +1,6 @@
 import { invalidateAll } from "$app/navigation";
 import type { SupabaseClient } from "@supabase/supabase-js";
+import { addNotification } from "./stores/notifications";
 
 type Streak = {
   id: number;
@@ -7,6 +8,8 @@ type Streak = {
   streak_days: number;
   last_updated: string;
 };
+
+const celebrations = ["Yippee!", "Wahoo!", "Congrats!", "Well done!", "Good job!", "Oh yeah!", "Keep it up!", "Great work!", "Awesome job!", "Nice!", "Fantastic!", "Amazing!", "Yay!", "Super!", "Wicked!",]
 
 export async function incrementStreak(supabase: SupabaseClient, streak: Streak, setConfetti: (value: boolean) => void): Promise<Streak | null> {
   const now = new Date();
@@ -37,10 +40,11 @@ export async function incrementStreak(supabase: SupabaseClient, streak: Streak, 
       return null;
     }
     setConfetti(true);
+    addNotification(`${celebrations[Math.floor(Math.random() * celebrations.length)]} ${streak.streak_name} was incremented`)
     invalidateAll();
     return updatedStreak;
   }
 
-  // No update needed if it's not the next day
+  addNotification(`${streak.streak_name} was already updated today`)
   return null;
 }

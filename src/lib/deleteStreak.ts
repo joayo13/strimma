@@ -1,5 +1,6 @@
 import { invalidateAll } from "$app/navigation";
 import type { SupabaseClient } from "@supabase/supabase-js";
+import { addNotification } from "./stores/notifications";
 
 type Streak = {
   id: number;
@@ -16,8 +17,10 @@ export async function deleteStreak(supabase: SupabaseClient, streak: Streak): Pr
 
   if (error) {
     console.error("Error deleting streak:", error);
+    addNotification(`Error: ${error.message}`)
     return false;
   }
   invalidateAll()
+  addNotification(`Deleted streak ${streak.streak_name}`)
   return true;
 }
