@@ -3,7 +3,6 @@
 	import type { EventHandler } from "svelte/elements";
 	import SecondaryButton from "../buttons/SecondaryButton.svelte";
 	import PrimaryButton from "../buttons/PrimaryButton.svelte";
-
 	let { supabase, streak } = $props();
 
 	let settingsDialog: HTMLDialogElement;
@@ -33,7 +32,9 @@
 			({ error } = await supabase.from("streaks").insert({ streak_name, streak_days: 0 }));
 		}
 
-		if (error) console.error(error);
+		if (error) {
+			console.error(error)
+		} 
 
 		invalidate("supabase:db:streaks");
 		form.reset();

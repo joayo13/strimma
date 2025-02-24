@@ -77,3 +77,10 @@
     --color-text-secondary: #FFFFFF;
     --color-bg-primary: #022C22;
 }
+.theme-sudo {
+    --color-primary: #222222;
+    --color-secondary: #FFFFFF;
+    --color-text-primary: #4AF626;
+    --color-text-secondary: #111111;
+    --color-bg-primary: #111111;
+}
