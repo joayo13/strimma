@@ -17,11 +17,11 @@
     return () => data.subscription.unsubscribe()
   })
 </script>
-<nav class={`px-8 py-2 fixed flex w-full justify-between items-center bg-bgPrimary text-tPrimary`}>
+<nav class={`px-4 py-2 fixed flex w-full justify-between items-center bg-bgPrimary text-tPrimary`}>
 	<a href="/" class="text-3xl font-bold md:text-6xl text-primary">streakr</a>
 	<SettingsDialog supabase={supabase}/>
 </nav>
-<div class={`bg-bgPrimary text-tPrimary min-h-screen flex items-center justify-center px-2`}>
+<div class={`bg-bgPrimary text-tPrimary min-h-screen flex items-center justify-center px-4`}>
   <GlobalNotifications />
 {@render children()}	
 </div>
