@@ -21,8 +21,9 @@
 	<a href="/" class="text-3xl font-bold md:text-6xl text-primary">streakr</a>
 	<SettingsDialog supabase={supabase}/>
 </nav>
+<GlobalNotifications />
 <div class={`bg-bgPrimary text-tPrimary min-h-screen flex items-center justify-center px-4`}>
-  <GlobalNotifications />
+  
 {@render children()}	
 </div>
 

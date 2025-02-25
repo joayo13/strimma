@@ -11,7 +11,7 @@
   <ul class="flex flex-col items-center gap-2 w-screen md:w-[40rem]">
     {#each streaks as streak}
       <li class="flex items-center justify-between w-full">
-        <p class="max-w-[20rem]">{streak.streak_name}</p>
+        <p class="px-4 md:max-w-[20rem] overflow-ellipsis overflow-hidden whitespace-nowrap">{streak.streak_name}</p>
         <div class="flex items-center">
         <p class="px-4 py-2">{streak.streak_days}</p>
         <IncrementStreakButton supabase={supabase} streak={streak}/>
