@@ -5,7 +5,7 @@ import SelectTheme from "../SelectTheme.svelte";
 
   
     let settingsDialog: HTMLDialogElement;
-    let { supabase } = $props()
+    let { supabase, user } = $props()
     function open() {
       settingsDialog.showModal();
     }
@@ -32,7 +32,9 @@ import SelectTheme from "../SelectTheme.svelte";
     <div class={`bg-bgPrimary p-6`}>
       <h2 class="text-xl font-bold mb-4">Settings</h2>
       <SelectTheme/>
+      {#if user}
       <SecondaryButton title="Logout" onclick={logout} />
+      {/if}
       <PrimaryButton title="Close"  onclick={close} />
     </div>
   </dialog>

@@ -15,7 +15,7 @@ export const actions: Actions = {
     } else {
       // Check if email confirmation is needed
       console.log(data)
-      if (data.user && data.user.aud !== 'authenticated') {
+      if (data.user && data.user.user_metadata.email_verified === false) {
         // User needs to confirm email before logging in
         redirect(303, '/auth/confirm-email')
       } else {
