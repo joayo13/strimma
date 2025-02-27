@@ -12,9 +12,9 @@ const addNotification = (message: string, duration = 3000) => {
 
 	notifications.update((n) => [...n, { id, message }]);
 
-	// Ensure only one notification is visible at a time
+	// Delay removal to allow the transition to complete
 	setTimeout(() => {
-		notifications.update((n) => n.slice(1)); // Remove the first notification in the queue
+		notifications.update((n) => n.filter((notif) => notif.id !== id));
 	}, duration);
 };
 
