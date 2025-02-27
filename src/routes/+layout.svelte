@@ -19,7 +19,7 @@
 </script>
 
 <nav class={`fixed flex w-full items-center justify-between bg-bgPrimary px-4 py-2 text-tPrimary`}>
-	<a href="/" class="text-3xl font-bold text-primary md:text-6xl">streakr</a>
+	<a href="/" class="text-3xl font-bold text-primary md:text-6xl">strimma</a>
 	<SettingsDialog {user} {supabase} />
 </nav>
 <GlobalNotifications />
