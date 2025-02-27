@@ -6,11 +6,11 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				primary: "var(--color-primary)",
-				secondary: "var(--color-secondary)",
-				bgPrimary: "var(--color-bg-primary)",
-				tPrimary: "var(--color-text-primary)",
-				tSecondary: "var(--color-text-secondary)"
+				primary: 'var(--color-primary)',
+				secondary: 'var(--color-secondary)',
+				bgPrimary: 'var(--color-bg-primary)',
+				tPrimary: 'var(--color-text-primary)',
+				tSecondary: 'var(--color-text-secondary)'
 			}
 		}
 	}

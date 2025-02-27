@@ -1,29 +1,28 @@
 <script lang="ts">
 	import '../app.css';
-	import { invalidate } from '$app/navigation'
-  	import { onMount } from 'svelte'
+	import { invalidate } from '$app/navigation';
+	import { onMount } from 'svelte';
 	import SettingsDialog from '../components/dialogs/SettingsDialog.svelte';
 	import GlobalNotifications from '$lib/components/GlobalNotifications.svelte';
-  	let { data, children } = $props()
-  	let { session, supabase, user } = $derived(data)
+	let { data, children } = $props();
+	let { session, supabase, user } = $derived(data);
 
-  onMount(() => {
-    const { data } = supabase.auth.onAuthStateChange((_, newSession) => {
-      if (newSession?.expires_at !== session?.expires_at) {
-        invalidate('supabase:auth')
-      }
-    })
+	onMount(() => {
+		const { data } = supabase.auth.onAuthStateChange((_, newSession) => {
+			if (newSession?.expires_at !== session?.expires_at) {
+				invalidate('supabase:auth');
+			}
+		});
 
-    return () => data.subscription.unsubscribe()
-  })
+		return () => data.subscription.unsubscribe();
+	});
 </script>
-<nav class={`px-4 py-2 fixed flex w-full justify-between items-center bg-bgPrimary text-tPrimary`}>
-	<a href="/" class="text-3xl font-bold md:text-6xl text-primary">streakr</a>
-	<SettingsDialog user={user} supabase={supabase}/>
+
+<nav class={`fixed flex w-full items-center justify-between bg-bgPrimary px-4 py-2 text-tPrimary`}>
+	<a href="/" class="text-3xl font-bold text-primary md:text-6xl">streakr</a>
+	<SettingsDialog {user} {supabase} />
 </nav>
 <GlobalNotifications />
-<div class={`bg-bgPrimary text-tPrimary min-h-screen flex items-center justify-center px-4`}>
-  
-{@render children()}	
+<div class={`flex min-h-screen items-center justify-center bg-bgPrimary px-4 text-tPrimary`}>
+	{@render children()}
 </div>
-

@@ -2,85 +2,84 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-
 @layer base {
-    :root {
-        --color-primary: #171717;
-        --color-secondary: #525252;
-        --color-text-primary: #FFFFFF;
-        --color-bg-primary: #FFFFFF;
-    }
+	:root {
+		--color-primary: #171717;
+		--color-secondary: #525252;
+		--color-text-primary: #ffffff;
+		--color-bg-primary: #ffffff;
+	}
 }
 
 .theme-dark {
-    --color-primary: #525252;
-    --color-secondary: #C2410C;
-    --color-text-primary: #FFFFFF;
-    --color-text-secondary: #FFFFFF;
-    --color-bg-primary: #171717;
+	--color-primary: #525252;
+	--color-secondary: #c2410c;
+	--color-text-primary: #ffffff;
+	--color-text-secondary: #ffffff;
+	--color-bg-primary: #171717;
 }
 
 .theme-light {
-    --color-primary: #D4D4D4;
-    --color-secondary: #2563EB;
-    --color-text-primary: #171717;
-    --color-text-secondary: #FFFFFF;
-    --color-bg-primary: #FFFFFF;
+	--color-primary: #d4d4d4;
+	--color-secondary: #2563eb;
+	--color-text-primary: #171717;
+	--color-text-secondary: #ffffff;
+	--color-bg-primary: #ffffff;
 }
 .theme-amethyst {
-    --color-primary: #5B21B6;
-    --color-secondary: #BE185D;
-    --color-text-primary: #DDD6FE;
-    --color-text-primary: #DDD6FE;
-    --color-bg-primary: #1E1B4B;
+	--color-primary: #5b21b6;
+	--color-secondary: #be185d;
+	--color-text-primary: #ddd6fe;
+	--color-text-primary: #ddd6fe;
+	--color-bg-primary: #1e1b4b;
 }
 
 .theme-ruby {
-    --color-primary: #DC2626;
-    --color-secondary: #FECACA;
-    --color-text-primary: #FECACA;
-    --color-text-secondary: #450A0A;
-    --color-bg-primary: #450A0A;
+	--color-primary: #dc2626;
+	--color-secondary: #fecaca;
+	--color-text-primary: #fecaca;
+	--color-text-secondary: #450a0a;
+	--color-bg-primary: #450a0a;
 }
 .theme-janvier {
-    --color-primary: #DBEAFE;
-    --color-secondary: #020617;
-    --color-text-primary: #020617;
-    --color-text-secondary: #DBEAFE;
-    --color-bg-primary: #93C5FD;
+	--color-primary: #dbeafe;
+	--color-secondary: #020617;
+	--color-text-primary: #020617;
+	--color-text-secondary: #dbeafe;
+	--color-bg-primary: #93c5fd;
 }
 .theme-voltage {
-    --color-primary: #FACC15;
-    --color-secondary: #171717;
-    --color-text-primary: #171717;
-    --color-text-secondary: #FFFFFF;
-    --color-bg-primary: #22D3EE;
+	--color-primary: #facc15;
+	--color-secondary: #171717;
+	--color-text-primary: #171717;
+	--color-text-secondary: #ffffff;
+	--color-bg-primary: #22d3ee;
 }
 .theme-zen {
-    --color-primary: #ECFDF5;
-    --color-secondary: #15803D;
-    --color-text-primary: #171717;
-    --color-text-secondary: #FFFFFF;
-    --color-bg-primary: #BBF7D0;
+	--color-primary: #ecfdf5;
+	--color-secondary: #15803d;
+	--color-text-primary: #171717;
+	--color-text-secondary: #ffffff;
+	--color-bg-primary: #bbf7d0;
 }
 .theme-gamma {
-    --color-primary: #5B21B6;
-    --color-secondary: #DDD6FE;
-    --color-text-primary: #A3E635;
-    --color-text-secondary: #171717;
-    --color-bg-primary: #2E1065;
+	--color-primary: #5b21b6;
+	--color-secondary: #ddd6fe;
+	--color-text-primary: #a3e635;
+	--color-text-secondary: #171717;
+	--color-bg-primary: #2e1065;
 }
 .theme-eva {
-    --color-primary: #064E3B;
-    --color-secondary: #0A0A0A;
-    --color-text-primary: #FFFFFF;
-    --color-text-secondary: #FFFFFF;
-    --color-bg-primary: #022C22;
+	--color-primary: #064e3b;
+	--color-secondary: #0a0a0a;
+	--color-text-primary: #ffffff;
+	--color-text-secondary: #ffffff;
+	--color-bg-primary: #022c22;
 }
 .theme-sudo {
-    --color-primary: #222222;
-    --color-secondary: #FFFFFF;
-    --color-text-primary: #4AF626;
-    --color-text-secondary: #111111;
-    --color-bg-primary: #111111;
+	--color-primary: #222222;
+	--color-secondary: #ffffff;
+	--color-text-primary: #4af626;
+	--color-text-secondary: #111111;
+	--color-bg-primary: #111111;
 }

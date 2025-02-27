@@ -1,15 +1,14 @@
 <script lang="ts">
-    import { notifications } from '$lib/stores/notifications';
+	import { notifications } from '$lib/stores/notifications';
 	import { fade } from 'svelte/transition';
-  </script>
-  
-  <div class="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 flex flex-col gap-2 items-center overflow-hidden">
-    {#each $notifications as { message }}
-      <div
-        class="bg-primary text-tPrimary p-3 rounded-lg shadow-lg w-fit"
-        transition:fade
-      >
-        {message}
-      </div>
-    {/each}
-  </div>
+</script>
+
+<div
+	class="fixed bottom-4 left-1/2 z-50 flex -translate-x-1/2 flex-col items-center gap-2 overflow-hidden"
+>
+	{#each $notifications as { message }}
+		<div class="w-fit rounded-lg bg-primary p-3 text-tPrimary shadow-lg" transition:fade>
+			{message}
+		</div>
+	{/each}
+</div>
