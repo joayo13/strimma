@@ -1,6 +1,7 @@
 <script>
 	import PrimaryButton from '../../components/buttons/PrimaryButton.svelte';
 	import SecondaryButton from '../../components/buttons/SecondaryButton.svelte';
+	import SignInWithGoogleButton from '../../components/buttons/SignInWithGoogleButton.svelte';
 </script>
 <div>
 <form class="flex flex-col gap-2" method="POST" action="?/login">
@@ -31,6 +32,6 @@
 	<div class='h-px w-full bg-tPrimary'></div>
 </div>
 <form class="text-center" method="POST">
-	<PrimaryButton title="Sign In With Google" formaction="?/googleSignIn"></PrimaryButton>
+	<SignInWithGoogleButton/>
 </form>
 </div>
