@@ -23,4 +23,5 @@
 		<PrimaryButton title="Login"></PrimaryButton>
 		<SecondaryButton title="Sign Up" formaction="?/signup"></SecondaryButton>
 	</div>
+	<PrimaryButton title="Google" formaction="?/googleSignIn"></PrimaryButton>
 </form>

@@ -48,5 +48,19 @@ export const actions: Actions = {
 		} else {
 			redirect(303, '/');
 		}
-	}
-};
+	},
+
+	googleSignIn: async ({ request, locals: { supabase } }) => {
+		const { data, error } = await supabase.auth.signInWithOAuth({
+			provider: "google", // specify the provider
+			options: {
+				redirectTo: 'https://strimma.netlify.app/auth/callback',
+			},
+		});
+	
+		if (data?.url) {
+			redirect(303, data.url); // Ensure redirect is correctly implemented
+		} else {
+			console.error("OAuth Sign-in failed", error);
+		}
+	}}
