@@ -2,7 +2,7 @@
 	import PrimaryButton from '../../components/buttons/PrimaryButton.svelte';
 	import SecondaryButton from '../../components/buttons/SecondaryButton.svelte';
 </script>
-
+<div>
 <form class="flex flex-col gap-2" method="POST" action="?/login">
 	<label for="email" class="block"> Email </label>
 	<input
@@ -23,5 +23,14 @@
 		<PrimaryButton title="Login"></PrimaryButton>
 		<SecondaryButton title="Sign Up" formaction="?/signup"></SecondaryButton>
 	</div>
-	<PrimaryButton title="Google" formaction="?/googleSignIn"></PrimaryButton>
+	
 </form>
+<div class='flex gap-2 items-center mt-4'>
+	<div class='h-px w-full bg-tPrimary'></div>
+	<p class='text-sm'>or</p>
+	<div class='h-px w-full bg-tPrimary'></div>
+</div>
+<form class="text-center" method="POST">
+	<PrimaryButton title="Sign In With Google" formaction="?/googleSignIn"></PrimaryButton>
+</form>
+</div>
