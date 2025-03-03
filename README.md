@@ -2,6 +2,8 @@
 
 Strimma is a minimalist streak tracking app designed to help you stay consistent with your habits. It focuses on simplicity, ensuring that tracking your streaks is effortless and distraction-free.
 
+# Live Demo: https://strimma.netlify.app
+
 ## Features
 - **Minimalist UI** – Keep your focus on what matters: your streaks.
 - **Smart Streak Incrementing** – Streaks increment when the date changes, rather than requiring a full 24-hour span.
@@ -19,7 +21,7 @@ Strimma is a minimalist streak tracking app designed to help you stay consistent
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/strimma.git
+   git clone https://github.com/joayo13/strimma.git
    cd strimma
    ```
 2. Install dependencies:
