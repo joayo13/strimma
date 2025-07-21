@@ -37,7 +37,7 @@ export const actions: Actions = {
 		const password = formData.get('password') as string;
 
 		// Try to sign in
-		const { error, data } = await supabase.auth.signInWithPassword({ email, password });
+		const { error } = await supabase.auth.signInWithPassword({ email, password });
 
 		// If error occurs due to email not being confirmed
 		if (error && error.message.includes('Email not confirmed')) {
@@ -50,17 +50,18 @@ export const actions: Actions = {
 		}
 	},
 
-	googleSignIn: async ({ request, locals: { supabase } }) => {
+	googleSignIn: async ({ locals: { supabase } }) => {
 		const { data, error } = await supabase.auth.signInWithOAuth({
-			provider: "google", // specify the provider
+			provider: 'google', // specify the provider
 			options: {
-				redirectTo: 'https://strimma.netlify.app/auth/callback',
-			},
+				redirectTo: 'https://strimma.netlify.app/auth/callback'
+			}
 		});
-	
+
 		if (data?.url) {
 			redirect(303, data.url); // Ensure redirect is correctly implemented
 		} else {
-			console.error("OAuth Sign-in failed", error);
+			console.error('OAuth Sign-in failed', error);
 		}
-	}}
+	}
+};
