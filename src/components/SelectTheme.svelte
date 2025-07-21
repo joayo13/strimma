@@ -1,18 +1,7 @@
 <script lang="ts">
 	import { theme } from '$lib/theme';
 
-	const themes = [
-		'dark',
-		'light',
-		'amethyst',
-		'eva',
-		'gamma',
-		'janvier',
-		'ruby',
-		'sudo',
-		'voltage',
-		'zen'
-	]; // Add more if needed
+	const themes = ['dark', 'light', 'amethyst', 'eva', 'gamma', 'janvier', 'ruby', 'sudo', 'zen']; // Add more if needed
 
 	function changeTheme(event: Event) {
 		const newTheme = (event.target as HTMLSelectElement).value;

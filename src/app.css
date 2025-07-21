@@ -13,65 +13,58 @@
 
 .theme-dark {
 	--color-primary: #525252;
-	--color-secondary: #c2410c;
+	--color-secondary: #b84f26;
 	--color-text-primary: #ffffff;
 	--color-text-secondary: #ffffff;
-	--color-bg-primary: #171717;
+	--color-bg-primary: #111111;
 }
 
 .theme-light {
 	--color-primary: #d4d4d4;
-	--color-secondary: #2563eb;
+	--color-secondary: #3160c5;
 	--color-text-primary: #171717;
-	--color-text-secondary: #ffffff;
-	--color-bg-primary: #ffffff;
+	--color-text-secondary: #f4f4f4;
+	--color-bg-primary: #f4f4f4;
 }
 .theme-amethyst {
-	--color-primary: #5b21b6;
-	--color-secondary: #be185d;
+	--color-primary: #6c40b3;
+	--color-secondary: #aa2f62;
 	--color-text-primary: #ddd6fe;
 	--color-text-primary: #ddd6fe;
-	--color-bg-primary: #1e1b4b;
+	--color-bg-primary: #1a1830;
 }
 
 .theme-ruby {
-	--color-primary: #dc2626;
-	--color-secondary: #fecaca;
-	--color-text-primary: #fecaca;
-	--color-text-secondary: #450a0a;
-	--color-bg-primary: #450a0a;
+	--color-primary: #6e3131;
+	--color-secondary: #ecc7c7;
+	--color-text-primary: #ecc7c7;
+	--color-text-secondary: #271212;
+	--color-bg-primary: #271212;
 }
 .theme-janvier {
-	--color-primary: #dbeafe;
+	--color-primary: #c2cfe0;
 	--color-secondary: #020617;
 	--color-text-primary: #020617;
 	--color-text-secondary: #dbeafe;
-	--color-bg-primary: #93c5fd;
-}
-.theme-voltage {
-	--color-primary: #facc15;
-	--color-secondary: #171717;
-	--color-text-primary: #171717;
-	--color-text-secondary: #ffffff;
-	--color-bg-primary: #22d3ee;
+	--color-bg-primary: #7fa5d1;
 }
 .theme-zen {
-	--color-primary: #ecfdf5;
+	--color-primary: #ddf8ea;
 	--color-secondary: #15803d;
 	--color-text-primary: #171717;
-	--color-text-secondary: #ffffff;
-	--color-bg-primary: #bbf7d0;
+	--color-text-secondary: #f4f4f4;
+	--color-bg-primary: #95cfa8;
 }
 .theme-gamma {
 	--color-primary: #5b21b6;
 	--color-secondary: #ddd6fe;
-	--color-text-primary: #a3e635;
+	--color-text-primary: #aad16c;
 	--color-text-secondary: #171717;
-	--color-bg-primary: #2e1065;
+	--color-bg-primary: #1f172e;
 }
 .theme-eva {
 	--color-primary: #064e3b;
-	--color-secondary: #0a0a0a;
+	--color-secondary: #111111;
 	--color-text-primary: #ffffff;
 	--color-text-secondary: #ffffff;
 	--color-bg-primary: #022c22;
