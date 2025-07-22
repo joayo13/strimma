@@ -8,7 +8,7 @@
 
 <div>
 	{#if confetti}
-		<Confetti rounded={true} amount={100} fallDistance={"10rem"} x={[-2, 2]}/>
+		<Confetti rounded={true} amount={100} fallDistance={'10rem'} x={[-2, 2]} />
 	{/if}
 </div>
 <button
