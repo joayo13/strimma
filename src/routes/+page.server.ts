@@ -8,20 +8,30 @@ export const load: PageServerLoad = async ({ depends, locals: { supabase } }) =>
 		.from('streaks')
 		.select('id, streak_name, streak_days, last_updated')
 		.order('id');
+
 	if (error) {
-		console.error('Error fetching streaks:', error); // Log any error
+		console.error('Error fetching streaks:', error);
 	}
 
 	if (streaks) {
 		const updatedStreaks = validateStreaks(streaks);
 
 		await Promise.all(
-			updatedStreaks.map(async (streak) => {
-				if (streak.streak_days === 0) {
+			updatedStreaks.map(async (updatedStreak, i) => {
+				const originalStreak = streaks[i];
+
+				// Only update if streak_days or last_updated changed
+				if (
+					updatedStreak.streak_days !== originalStreak.streak_days ||
+					updatedStreak.last_updated !== originalStreak.last_updated
+				) {
 					await supabase
 						.from('streaks')
-						.update({ streak_days: 0, last_updated: streak.last_updated })
-						.eq('id', streak.id);
+						.update({
+							streak_days: updatedStreak.streak_days,
+							last_updated: updatedStreak.last_updated
+						})
+						.eq('id', updatedStreak.id);
 				}
 			})
 		);
