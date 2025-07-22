@@ -30,7 +30,7 @@ export const actions: Actions = {
 			}
 		}
 	},
-	googleSignIn: async ({ request, locals: { supabase } }) => {
+	googleSignIn: async ({ locals: { supabase } }) => {
 		const { data, error } = await supabase.auth.signInWithOAuth({
 			provider: 'google', // specify the provider
 			options: {
