@@ -36,7 +36,7 @@
 	};
 </script>
 
-<button onclick={open} class="rounded-lg px-4 py-2 font-bold transition-colors hover:bg-primary"
+<button onclick={open} class="rounded-lg px-4 py-2 transition-colors hover:bg-primary"
 	>+ Add New Streak</button
 >
 

@@ -51,7 +51,7 @@
 	class="overflow-hidden rounded-lg text-tPrimary backdrop:bg-black/50"
 >
 	<div class={`bg-bgPrimary p-6`}>
-		<h2 class="mb-4 text-xl font-bold">{streak ? 'Edit Streak' : 'Create Streak'}</h2>
+		<h2 class="mb-4 text-xl">{streak ? 'Edit Streak' : 'Create Streak'}</h2>
 		<form onsubmit={handleSubmit}>
 			<label class="block py-2" for="streak_name">Streak Title</label>
 			<input

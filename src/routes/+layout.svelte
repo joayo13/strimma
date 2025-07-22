@@ -23,6 +23,8 @@
 	<SettingsDialog {user} {supabase} />
 </nav>
 <GlobalNotifications />
-<div class={`flex min-h-screen items-center justify-center bg-bgPrimary px-4 text-tPrimary`}>
+<div
+	class={`flex min-h-screen items-center justify-center overflow-x-hidden bg-bgPrimary px-4 text-tPrimary`}
+>
 	{@render children()}
 </div>

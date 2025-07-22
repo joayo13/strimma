@@ -4,11 +4,24 @@
 
 	let { supabase, streak } = $props();
 	let confetti = $state(false);
+
+	const secondaryColor = getComputedStyle(document.documentElement)
+		.getPropertyValue('--color-secondary')
+		.trim();
+	const primaryColor = getComputedStyle(document.documentElement)
+		.getPropertyValue('--color-primary')
+		.trim();
 </script>
 
 <div>
 	{#if confetti}
-		<Confetti rounded={true} amount={100} fallDistance={'10rem'} x={[-2, 2]} />
+		<Confetti
+			colorArray={[primaryColor, secondaryColor]}
+			amount={100}
+			fallDistance={'5rem'}
+			x={[-1, 1]}
+			y={[0, 1]}
+		/>
 	{/if}
 </div>
 <button

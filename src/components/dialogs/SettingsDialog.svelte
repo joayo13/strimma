@@ -35,7 +35,7 @@
 	class="overflow-hidden rounded-lg text-tPrimary backdrop:bg-black/50"
 >
 	<div class={`bg-bgPrimary p-6`}>
-		<h2 class="mb-4 text-xl font-bold">Settings</h2>
+		<h2 class="mb-4 text-xl">Settings</h2>
 		<SelectTheme />
 		{#if user}
 			<SecondaryButton title="Logout" onclick={logout} />
