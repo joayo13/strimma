@@ -54,7 +54,7 @@ export const actions: Actions = {
 		const { data, error } = await supabase.auth.signInWithOAuth({
 			provider: 'google', // specify the provider
 			options: {
-				redirectTo: 'https://strimma.netlify.app/auth/callback'
+				redirectTo: 'https://10streak.netlify.app/auth/callback'
 			}
 		});
 
